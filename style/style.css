@@ -1,0 +1,246 @@
+body {
+    background:#ffffff;
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.image-container {
+    flex: 1.2;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.02);
+}
+
+.form-container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    margin-bottom: 25px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .login-container {
+        flex-direction: column;
+        width: 95%;
+        min-height: auto;
+    }
+    
+    .image-container {
+        flex: none;
+        padding: 30px;
+        min-height: 250px;
+    }
+    
+    .image-container img {
+        max-width: 300px;
+    }
+    
+    .form-container {
+        padding: 40px 30px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* تأثيرات إضافية للتصميم */
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Bootstrap Integration Styles */
+.custom-input {
+    border: 2px solid rgba(102, 126, 234, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 18px 20px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.3s ease !important;
+    font-size: 16px !important;
+}
+
+.custom-input:focus {
+    border-color: #667eea !important;
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.custom-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    border-radius: 15px !important;
+    padding: 18px 20px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4) !important;
+}
+
+.custom-btn:active {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* RTL Support */
+[dir="rtl"] .me-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+/* Alert Styling */
+.alert-danger {
+    background: rgba(220, 53, 69, 0.1) !important;
+    border: 2px solid rgba(220, 53, 69, 0.2) !important;
+    border-radius: 15px !important;
+    color: #dc3545 !important;
+}
+
+/* Input Group Styling */
+.input-group .btn-outline-secondary {
+    border: 2px solid rgba(102, 126, 234, 0.2) !important;
+    border-left: none !important;
+    border-radius: 0 15px 15px 0 !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.input-group .custom-input {
+    border-right: none !important;
+    border-radius: 15px 0 0 15px !important;
+}
+
+/* Button Outline Primary */
+.btn-outline-primary {
+    border: 2px solid #667eea !important;
+    color: #667eea !important;
+    border-radius: 15px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-primary:hover {
+    background: #667eea !important;
+    border-color: #667eea !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3) !important;
+}
